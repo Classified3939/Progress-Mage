@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Mage</title>
+</head>
+<body>
+    <div style="display:flex">
+        <div id="tabs" style="display:flex;border:2px solid black;margin-bottom:1em;border-radius:25%;width:fit-content">
+            <h3 id="tab1Button" class="tabButton" onclick="tabSwitch(1)">Main</h3>
+            <h3 id="tab2Button" class="tabButton" onclick="tabSwitch(2)">Cores</h3>
+            <h3 id="tab2Button" class="tabButton" onclick="tabSwitch(3)">Challenges</h3>
+        </div>
+        <button id="saveButton" style="margin-left:1%;height: 5em" onclick="saveGame()">Save Game</button>
+        <button id="resetSaveButton" style="margin-left:1%;height: 5em" onclick="resetSave()">Reset Save</button>
+    </div>
+
+    <div id="tab1">
+        <div id="manaContainer" style="display:flex;">
+            <div id="manaLabels" style="display:block;">
+                <h2 id="manaCount" style="margin:0em"></h2>
+                <h4 id="manaGain" style="margin:0em"></h4>
+            </div>
+            <div id="manaProgressContainer" style="width:50%;border:3px solid black;margin-left:3em">
+                <div id="manaProgressBar" style="background-color: rgb(44, 44, 196);height:3.5em;transition:all .1s"></div>
+            </div>
+        </div>
+        <div id="prestigeButtons" style="display:flex;margin:1em;justify-items:center;"></div>
+        <div id="elementalResources" style="display:flex;margin:0.5em;width:100%"></div>
+        <div id="primarySpellButtons" style="display:flex;width:100%">
+            <div id="waterSpells" style="display:grid;width:100%;justify-items:center;"></div>
+            <div id="earthSpells" style="display:grid;width:100%;justify-items:center;"></div>
+            <div id="fireSpells" style="display:grid;width:100%;justify-items:center;"></div>
+            <div id="airSpells" style="display:grid;width:100%;justify-items:center;"></div>
+        </div>
+        <div id="secondaryPrestigeButtons"  style="display:flex;margin:1em;justify-items:center;"></div>
+        <div id="secondaryElementalResources" style="display:flex;margin:0.5em;width:100%"></div>
+        <div id="secondarySpellButtons" style="display:flex;width:100%">
+            <div id="shadowSpells" style="display:grid;width:100%;justify-items:center;"></div>
+            <div id="lightSpells" style="display:grid;width:100%;justify-items:center;"></div>
+            <div id="lifeSpells" style="display:grid;width:100%;justify-items:center;"></div>
+            <div id="metalSpells" style="display:grid;width:100%;justify-items:center;"></div>
+        </div>
+        <button id="coreButton" class="prestigeButton" onclick="tryCoreReset()"></button>
+    </div>
+    <div id="tab2">
+        <h1 id="coreCount" style="margin:0em;"></h2>
+        <h3 id="coreMult" style="margin:0em;"></h3>
+        <button id="coreRespec" style="margin-top:5px" onclick="coreRespec()">Retreve all Cores (will perform Core Reset)</button>
+        <div id="coreUpgrades" style="width:75%;display:block">
+            <div id="coreUpgrades1" style="display:flex;margin-top:5%;"></div>
+            <div id="coreUpgrades2" style="display:flex;margin-top:2.5%"></div>
+        </div>
+    </div>
+    <div id="tab3">
+        <h1>NOT YET IMPLEMENTED</h1>
+    </div>
+    <script src="utils.js"></script>
+    <script src="spells.js"></script>
+    <script src="cores.js"></script>
+    <script src="saving.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
