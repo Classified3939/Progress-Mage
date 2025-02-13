@@ -93,7 +93,7 @@ function timesCastRefresh(){
     for (let spell of allSpells){
         let spellButton = document.getElementById(spell.buttonId);
         spellButton.innerHTML = spell.title + " " + spell.timesCast + (spell.maxCast != -1 ? "/"+spell.maxCast : "") + "<br>" + spell.display 
-        + "<br>-" + spell.cost.toFixed(2) + " " + elementNames[spell.typeId] + " ";
+        + "<br>-" + formatNumber(spell.cost) + " " + elementNames[spell.typeId] + " ";
     }
 }
 
