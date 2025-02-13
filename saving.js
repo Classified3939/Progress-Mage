@@ -33,7 +33,10 @@ function loadGame(){
     if (typeof savedGame.cores !== "undefined") cores = savedGame.cores;
     if (typeof savedGame.totalCores !== "undefined") totalCores = savedGame.totalCores;
     if (typeof savedGame.elementAmounts !== "undefined") elementAmounts = savedGame.elementAmounts;
-    if (typeof savedGame.coreUpgrades !== "undefined") elementAmounts = savedGame.coreUpgrades;
+    if (typeof savedGame.coreUpgrades !== "undefined") {
+        coreUpgrades = savedGame.coreUpgrades;
+        coreUpgradesInit();
+    }
     if (typeof savedGame.timesCast !== "undefined") {
         for (let i of savedGame.timesCast){
             allSpells[i].timesCast = savedGame.timesCast[i];
