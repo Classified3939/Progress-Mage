@@ -39,7 +39,8 @@ function loadGame(){
         spellInit();
     }
     if (typeof savedGame.timesCast !== "undefined") {
-        for (let i = 0; i < savedGame.timesCast.size; i++){
+        for (let i = 0; i < savedGame.timesCast.length; i++){
+            console.log(savedGame.timesCast[i]);
             allSpells[i].timesCast = savedGame.timesCast[i];
             spellInit();
         }
