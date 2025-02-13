@@ -36,6 +36,7 @@ function loadGame(){
     if (typeof savedGame.coreUpgrades !== "undefined") {
         coreUpgrades = savedGame.coreUpgrades;
         coreUpgradesInit();
+        spellInit();
     }
     if (typeof savedGame.timesCast !== "undefined") {
         for (let i of savedGame.timesCast){
